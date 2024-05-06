@@ -1,0 +1,633 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #c7a17a;
+    --background-color: #f9f5f0;
+    --dark-color: #151515;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ********************************** */
+/*             UTILIDADES             */
+/* ********************************** */
+/*header{
+    overflow-x: auto;
+    } */
+
+.container {
+  width: 100%; /* Ajustar el ancho al 100% */
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 2rem; /* Agregar un relleno a los lados para dispositivos móviles */
+}
+
+.heading-1 {
+    text-align: center;
+    font-weight: 500;
+    font-size: 3rem;
+} 
+
+/* ********************************** */
+/*               HEADER               */
+/* ********************************** */
+.container-hero {
+    background-color: var(--background-color);
+}
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.contact-icon {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+@media (max-width: 768px) {
+    .contact-icon {
+      display: none; /* Ocultar completamente el icono de contacto */
+    }
+  }
+
+.contact-icon i {
+    font-size: 3.5rem;
+}
+
+.content-contact-icon {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+@media (max-width: 768px) {
+    .content-contact-icon {
+      display: none; /* Ocultar el contenido de contacto */
+    }
+  }
+
+.container-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.container-logo i {
+    font-size: 4rem;
+}
+
+.container-logo h1 a {
+    text-decoration: none;
+    color: #000;
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+}
+
+/* Media query para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container-logo {
+        margin-bottom: 1rem; /* Añade espacio entre el logo y el texto */
+    }
+}
+
+.container-navbar {
+    background-color: var(--primary-color);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.navbar .fa-bars {
+    display: none;
+}
+
+.menu {
+    display: flex;
+    gap: 2rem;
+}
+
+.menu li {
+    list-style: none;
+}
+
+.menu a {
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: var(--dark-color);
+    font-weight: 600;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.menu a::after {
+    content: '';
+    width: 1.5rem;
+    height: 1px;
+    background-color: #fff;
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.menu a:hover::after {
+    opacity: 1;
+}
+
+.menu a:hover {
+    color: #fff;
+}
+
+.search-form {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 2px solid #fff;
+    border-radius: 2rem;
+    background-color: #fff;
+    height: 4.4rem;
+    overflow: hidden;
+    width: 100%; /* Ajustar al 100% del ancho */
+    max-width: 25rem; /* Limitar el ancho máximo */
+}
+
+.search-form input{
+    outline: none;
+    font-family: inherit;
+    border: none;
+    width: 100%; 
+    font-size: 1.4rem;
+    padding: 0 2rem;
+    color: #777;
+    cursor: pointer;
+}
+
+.search-form input::-webkit-search-cancel-button{
+    appearance: none;
+}
+
+.search-form .btn-search{
+    border: none;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    height: 100%;
+    padding: 1rem;
+    margin-left: -2rem; /* Ajustar la posición del botón de búsqueda para que esté alineado */
+}
+
+.btn-search i {
+    font-size: 2rem;
+    color: #fff;
+}
+
+.banner {
+    background-image: linear-gradient(100deg, #363636, #00000000),
+        url('img/Imagen4.jpg');
+    height: 60rem;
+    background-size: cover;
+    background-position: center;
+}
+
+.content-banner {
+    max-width: 90rem;
+    margin: 0 auto;
+    padding: 25rem 0;
+}
+
+.content-banner p {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.content-banner h2 {
+    color: #fff;
+    font-size: 3.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.content-banner a {
+    margin-top: 2rem;
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--primary-color);
+    display: inline-block;
+    padding: 1rem 3rem;
+    text-transform: uppercase;
+    border-radius: 3rem;
+}
+
+/* ********************************** */
+/*          SECCIÓN INICIO           */
+/* ********************************** */
+.section-inicio {
+    background-color: var(--primary-color);
+    padding: 10rem 0;
+}
+
+.section-inicio .container {
+    text-align: center;
+}
+
+.section-inicio h1 {
+    font-size: 3.5rem;
+    color: var(--dark-color);
+    margin-bottom: 2rem;
+}
+
+.section-inicio p {
+    font-size: 1.8rem;
+    color: var(--dark-color);
+    margin-bottom: 3rem;
+}
+
+.section-inicio .btn-primary {
+    text-decoration: none;
+    display: inline-block;
+    padding: 1.5rem 3rem;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    background-color: var(--dark-color);
+    color: #fff;
+    border: none;
+    border-radius: 3rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.section-inicio .btn-primary:hover {
+    background-color: #a37b4e;
+}
+
+/* ********************************** */
+/*          SECCIÓN QUIÉNES SOMOS     */
+/* ********************************** */
+.section-quienes-somos {
+    background-color: #f9f5f0;
+    padding: 10rem 0;
+}
+
+.section-quienes-somos h2 {
+    text-align: center;
+    font-size: 3.5rem;
+    color: var(--dark-color);
+    margin-bottom: 3rem;
+}
+
+.section-quienes-somos p {
+    font-size: 1.8rem;
+    color: var(--dark-color);
+    line-height: 1.8;
+    text-align: justify; /* Alineación justificada para un aspecto más formal */
+    margin-bottom: 3rem; /* Incrementamos el margen inferior para separar del siguiente contenido */
+}
+/* ********************************** */
+/*          SECCIÓN QUÉ HACEMOS       */
+/* ********************************** */
+.section-que-hacemos {
+    background-color: #c7a17a;
+    padding: 10rem 0;
+}
+
+.section-que-hacemos h2 {
+    text-align: center;
+    font-size: 3.5rem;
+    color: #fff;
+    margin-bottom: 3rem;
+}
+
+.section-que-hacemos p {
+    font-size: 1.8rem;
+    color: #fff;
+    line-height: 1.8;
+    text-align: center;
+}
+
+/* ********************************** */
+/*          SECCIÓN PREGUNTAS         */
+/* ********************************** */
+.section-preguntas {
+    background-color: var(--background-color);
+    padding: 6rem 0; /* Reducir el padding para dispositivos más pequeños */
+}
+
+.section-preguntas h2 {
+    text-align: center;
+    font-size: 2.5rem; /* Reducir el tamaño del título para dispositivos más pequeños */
+    color: var(--dark-color);
+    margin-bottom: 2rem; /* Reducir el margen inferior */
+}
+
+.preguntas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr)); /* Ajustar el tamaño de las columnas */
+    gap: 2rem; /* Reducir el espacio entre preguntas */
+}
+
+.pregunta {
+    margin-bottom: 2rem; /* Reducir el margen inferior */
+}
+
+.pregunta h3 {
+    font-size: 1.8rem; /* Reducir el tamaño del título de la pregunta */
+    color: var(--dark-color);
+    margin-bottom: 1rem;
+}
+
+.pregunta p {
+    font-size: 1.4rem; /* Reducir el tamaño del texto de la pregunta */
+    color: var(--dark-color);
+    line-height: 1.6;
+}
+
+/* ********************************** */
+/*        SECCIÓN SERVICIOS           */
+/* ********************************** */
+.section-servicios {
+    background-color: #c7a17a;
+    padding: 10rem 0;
+}
+
+.section-servicios h2 {
+    text-align: center;
+    font-size: 3.5rem;
+    color: #fff;
+    margin-bottom: 3rem;
+}
+
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 4rem;
+}
+
+.servicio {
+    text-align: center;
+}
+
+.servicio i {
+    font-size: 5rem;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+.servicio h3 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.servicio p {
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+/* ********************************** */
+/*        SECCIÓN EQUIPO             */
+/* ********************************** */
+.section-equipo {
+    background-color: #f9f5f0;
+    padding: 10rem 0;
+}
+
+.section-equipo h1 {
+    text-align: center;
+    font-size: 3.5rem;
+    color: var(--dark-color);
+    margin-bottom: 3rem;
+}
+
+.equipo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 4rem;
+}
+
+.miembro-equipo {
+    text-align: center;
+    border-radius: 2rem;
+    overflow: hidden;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.miembro-equipo img {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 2rem;
+}
+
+.miembro-equipo h3 {
+    font-size: 2rem;
+    color: var(--dark-color);
+    margin-bottom: 1rem;
+}
+
+.miembro-equipo p {
+    font-size: 1.6rem;
+    color: var(--dark-color);
+}
+
+/* Añadir reglas para manejar el grid con 6 imágenes */
+@media (min-width: 1200px) {
+    .equipo-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* ********************************** */
+/*       SECCIÓN CONTACTO              */
+/* ********************************** */
+.section-contacto {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 10rem 0;
+}
+
+.section-contacto h2 {
+    text-align: center;
+    font-size: 3.5rem;
+    margin-bottom: 3rem;
+}
+
+.section-contacto p {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+}
+
+.contact-form {
+    max-width: 50rem;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 2rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.6rem;
+    border: none;
+    border-radius: 0.5rem;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 1.5rem 3rem;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    border: none;
+    border-radius: 3rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #a37b4e;
+}
+
+/* ********************************** */
+/*            FOOTER                  */
+/* ********************************** */
+.footer {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 10rem 0;
+}
+
+.footer h2 {
+    text-align: center;
+    font-size: 3.5rem;
+    margin-bottom: 3rem;
+}
+
+.footer p {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+}
+
+.contact-info {
+    text-align: center;
+}
+
+.contact-info p {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+}
+
+.redes-sociales {
+    display: flex;
+    justify-content: center;
+}
+
+.redes-sociales a {
+    font-size: 2.5rem;
+    margin: 0 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.redes-sociales a:hover {
+    color: #a37b4e;
+}
+
+/* ********************************** */
+/*               OTROS                */
+/* ********************************** */
+@media (max-width: 768px) {
+    .navbar .fa-bars {
+        display: block;
+        font-size: 2.5rem;
+        cursor: pointer;
+    }
+  
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 5rem;
+        left: 0;
+        background-color: var(--primary-color);
+        width: 100%;
+        text-align: center;
+    }
+  
+    .menu li {
+        margin-bottom: 1rem;
+    }
+  
+    .menu a {
+        font-size: 1.8rem;
+    }
+  
+    .menu a::after {
+        display: none;
+    }
+  
+    .search-form {
+        flex: 1;
+    }
+}
+/* ********************************** */
+/*          ANIMACIONES               */
+/* ********************************** */
+
+@keyframes reveal {
+    0%{
+        transform: scale(0.9) translateY(-2em);
+        opacity: 0;
+    }  
+
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }  
+}
+
+.reveal{
+    animation: reveal ease-in-out both;
+    animation-timeline: view(block);
+    animation-range: cover 20% cover 35%;
+}
